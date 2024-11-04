@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotate log files
+Wants=logrotate.timer
+
+[Service]
+User=root
+Group=root
+Type=oneshot
+ExecStart=/usr/sbin/logrotate -f /etc/logrotate.d/app
+
